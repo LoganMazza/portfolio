@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>[Your Name] — Technical Writing Portfolio</title>
+<title>Logan Mazza — Technical Writing Portfolio</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -41,6 +41,29 @@
     padding: 3.5rem 0 2.5rem;
     margin-bottom: 3rem;
   }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 0.35rem;
+  }
+  .headshot {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--border);
+    border: 1px dashed #b0a090;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    overflow: hidden;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .headshot img { width: 100%; height: 100%; object-fit: cover; display: block; }
   header h1 { font-size: 2rem; font-weight: 600; letter-spacing: -0.5px; color: #4a2e1a; }
   header .tagline {
     font-size: 1.05rem;
@@ -207,13 +230,18 @@
 
   <!-- Header -->
   <header>
-    <h1>[Your Name]</h1>
-    <p class="tagline">Senior Technical Writer · 5+ years · Developer Docs, User Guides, SOPs</p>
+    <div class="header-inner">
+      <div class="headshot">
+        <!-- <img src="headshot.jpg" alt="Your Name" /> -->
+        Photo
+      </div>
+      <h1>Logan Mazza</h1>
+    </div>
+    <p class="tagline">Senior Technical Writer · 9 years · Admin Guides, User Guides, Developer Documentation</p>
     <div class="contact-links">
-      <span>[Your City, State]</span>
-      <a href="mailto:you@example.com">you@example.com</a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-      <a href="https://yourwebsite.com" target="_blank">yourwebsite.com</a>
+      <span>Highlands Ranch, CO</span>
+      <a href="mailto:logan.mazza@gmail.com.com">logan.mazza@gmail.com</a>
+      <a href="https://linkedin.com/in/logan-mazza" target="_blank">LinkedIn</a>
     </div>
   </header>
 
@@ -221,15 +249,13 @@
   <section id="about">
     <h2>About</h2>
     <p class="about-text">
-      I'm a senior technical writer with 5+ years of experience translating complex technical concepts into clear, user-centered documentation. I specialize in API and developer documentation, user guides, and standard operating procedures for software and enterprise products.
+      I'm a senior technical writer with over 9 years of experience translating complex technical concepts into clear, user-centered documentation. I specialize in user guides, admin guides, and developer documentation for software and enterprise products.
     </p>
     <p class="about-text" style="margin-top: 0.75rem;">
-      I work closely with engineers, product managers, and UX teams to deliver documentation that reduces support burden, accelerates onboarding, and improves the overall user experience.
+      I work closely with engineers, product managers, and UX teams to deliver documentation that reduces support burden, accelerates onboarding and feature adoption, and improves the overall user experience.
     </p>
     <div class="skills-row">
       <span class="skill-pill">Docs-as-code</span>
-      <span class="skill-pill">REST APIs</span>
-      <span class="skill-pill">DITA / structured authoring</span>
       <span class="skill-pill">Content strategy</span>
       <span class="skill-pill">Style guide development</span>
       <span class="skill-pill">Developer portals</span>
@@ -297,10 +323,9 @@
 
   <!-- Footer -->
   <footer>
-    <span>Open to senior roles, contract work, and consulting.</span>
     <div class="cta">
-      <a class="secondary" href="mailto:you@example.com">Email me</a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn ↗</a>
+      <a class="secondary" href="mailto:logan.mazza@gmail.com">Contact me</a>
+      <a href="https://linkedin.com/in/logan-mazza" target="_blank">LinkedIn ↗</a>
     </div>
   </footer>
 
