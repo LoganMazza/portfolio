@@ -125,6 +125,26 @@
     flex-direction: column;
   }
 
+ * ── Featured full-width card ── */
+.project-card.feature {
+  grid-column: 1 / -1;        /* span all columns; works in the 2-col grid and the 1-col mobile fallback */
+  flex-direction: row;        /* image beside content instead of stacked */
+  gap: 1.75rem;
+}
+
+.project-card.feature .card-thumb {
+  flex: 0 0 45%;              /* image takes ~45% of the card's width */
+  margin-bottom: 0;          /* remove the stacked spacing */
+  aspect-ratio: auto;        /* override the 16/9 so the image matches the text column's height */
+  min-height: 240px;         /* sensible floor if the copy runs short */
+}
+
+.project-card.feature .card-body {
+  flex: 1;                   /* text column fills the rest */
+  display: flex;
+  flex-direction: column;
+}
+
   /* Thumbnail */
   .card-thumb {
     width: 100%;
@@ -224,6 +244,17 @@
     .card-header { flex-direction: column; }
     .cards-grid { grid-template-columns: 1fr; }
   }
+
+ /* stack image-over-content on narrow screens */
+@media (max-width: 720px) {
+  .project-card.feature { flex-direction: column; }
+  .project-card.feature .card-thumb {
+    flex: none;
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+    margin-bottom: 1.25rem;
+  }
+} 
 </style>
 </head>
 <body>
@@ -267,6 +298,26 @@
   <!-- Writing Samples -->
   <section id="writing-samples">
     <h2>Writing Samples</h2>
+   <div class="project-card feature">
+    <div class="card-thumb">
+     <img src="images/VCRMAlignHomepage.png" alt="Vault CRM Align Online Help Homepage" />
+    </div>
+    <div class="card-body">
+     <div class="card-header">
+      <div>
+       <h3>Vault CRM Align Online Help</h3>
+       <p class="meta">Product Documentation · Front-end site development</p>
+      </div>
+      <a class="card-link" href="https://vaultcrmalign.veeva.com/doc/Content/Home.htm" target="_blank">View ↗</a>
+     </div>
+     <p class="card-desc">A complete Online Help site developed for Veeva's Vault CRM Align product, a sales territory alignment tool.</p>
+     <ul class="card-bullets">
+      <li>Designed and implemented site front-end, including data architecture, based on collaboration with SMEs and PMs</li>
+      <li>Wrote and structured all topics within the site, including developing realistic use case scenarios to describe each feature</li>
+      <li>Captured and deployed screenshots to illustrate feature functionality</li>
+     </ul>
+    </div>
+   </div>
     <div class="cards-grid">
       <div class="project-card">
         <div class="card-thumb">
